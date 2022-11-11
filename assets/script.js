@@ -47,4 +47,13 @@ class Player {
 }
 
 const player = new Player();
-player.update();
+
+// fonction va qui permettre l'animation des actions en créant une loop
+function animate(){
+    requestAnimationFrame(animate)
+    // clearrect va nettoyer le canvas
+    c.clearRect(0,0, canvas.width, canvas.height)
+    player.update()
+}
+
+animate()
