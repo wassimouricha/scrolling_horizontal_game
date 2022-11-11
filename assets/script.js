@@ -5,9 +5,9 @@ const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d');
 
 // pour indiquer que mon canvas va prendre l'entierté de la largeur de mon navigateur
-canvas.width = window.innerWidth
+canvas.width = innerWidth
 // pour indiquer que mon canvas va prendre l'entierté de la hauteur de mon navigateur
-canvas.height = window.innerHeight
+canvas.height = innerHeight
 
 console.log(c);
 
@@ -80,23 +80,23 @@ function animate(){
 animate()
 
 addEventListener('keydown', ({ keyCode }) => {
-
+    
     // setup des boutons de directions sur le clavier
     switch(keyCode){
-        case 37 : 
+        case 81 : 
         console.log('left');
         keys.left.pressed = true
         break
-        case 39 : 
+        case 68 : 
         console.log('right');
         keys.right.pressed = true
         break
-        case 38 : 
+        case 90 : 
         console.log('up');
         // hauteur du saut
         player.velocity.y -= 10;
         break
-        case 40 : 
+        case 83 : 
         console.log('down');
         break
     }
@@ -106,20 +106,18 @@ addEventListener('keyup', ({ keyCode }) => {
 
     // setup des boutons de directions sur le clavier
     switch(keyCode){
-        case 37 : 
+        case 81 : 
         console.log('left');
         keys.left.pressed = false;
         break
-        case 39 : 
+        case 68 : 
         console.log('right');
         keys.right.pressed = false;
         break
-        case 38 : 
+        case 90 : 
         console.log('up');
-        // hauteur du saut
-        player.velocity.y -= 10;
         break
-        case 40 : 
+        case 83 : 
         console.log('down');
         break
     }
